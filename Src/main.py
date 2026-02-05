@@ -13,7 +13,13 @@ for i in range(0 ,len(reading)):
     response1 = openai.chat.completions.create(
 
         model="gpt-4o-mini",
-        messages=[{"role":"user","content":stroing[i]}],
+        messages=[ {"role":"system" , "content":"Acer 146.AD406.013 is an extended service and support package designed for eligible Acer hardware. "
+        "It provides enhanced post sale coverage including technical support services repair handling and service assistance for a defined coverage"
+        " period. This service helps reduce downtime improves device lifecycle management and ensures reliable operational continuity. The service "
+        "is non physical and does not include hardware components. Dimensions and weight are not applicable. Colour is not applicable as this is a digital service offering."
+        "This Should be Your Format , Length should be exact and mimic this pattern"},
+            {"role":"user","content":stroing[i]}
+            ],
         max_tokens=50,
         temperature=0.7
     )
